@@ -31,5 +31,7 @@ function redimensionar(){
     
     $("#menuClientes").addClass("col-xs-3");
     $("#contenido").removeClass("col-xs-12").addClass("col-xs-9");
+    UL = $("<ul class=''><li>Proyectos</li><li>Proyectos</li></ul>");
+     $("#menuClientes").add(UL);
     
 }
