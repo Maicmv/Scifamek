@@ -5,6 +5,7 @@ class Cliente extends General {
     function loguear($params) {
         extract($params);
         $consulta = "SELECT * FROM clientes where correo = '" . $parametros['usuario'] . "' and  contrasena = '" . md5($parametros['contrasena']) . "'";
+		//aca debe ir enlace con funcion postgres
         $cadena = $this->consultar($conexion, $consulta);
         $this->crearSesion($cadena);
         echo json_encode(count($cadena));
